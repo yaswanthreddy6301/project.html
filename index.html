@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        header {
+            width: 96%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: whitesmoke;
+            padding: 0 2%;
+            position: absolute;
+            top: 85%;
+        }
+        .hlogo {
+            display: flex;
+            /* gap: 1vh; */
+            width: 45vw;
+            color: yellow;
+            
+        }
+        .texty{
+            margin-left: 10px;
+        }
+        header ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        header ul li {
+            margin-left: 5vh;
+        }
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+        header ul a:hover {
+            text-decoration: dashed;
+        }
+        section {
+            width: 96%;
+            margin: 0 auto;
+            height: 80vh;
+            background-image: url('./propics/simple-house-01.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            position: relative;
+        }
+        .ya {
+            margin-top: 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8vh;
+        }
+        .ya h4 {
+            padding: 0 5%;
+        }
+        .yash {
+            margin-top: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .yash button {
+            height: 60px;
+            width: 100px;
+        }
+        .yash button:active {
+            background-color: green;
+        }
+        .piz {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            
+        }
+        .piz div {
+            width: 25%;
+        }
+        .abt {
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .abtimg {
+            width: 40%;
+            height: 40vh;
+            background-image: url('./propics/img-01.jpg');
+            background-size: cover;
+        }
+        .abttext {
+            width: 40%;
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .abt button {
+            width: 20vh;
+            padding: 1vh 2vh;
+        }
+        .content {
+            margin-top: 5vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8vh;
+        }
+        .content p {
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+        .text {
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 20px;
+        }
+        .text div {
+            width: 20vw;
+            margin-top: 10px;
+        }
+        .text p {
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+        .abti {
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .abtimag {
+            width: 40%;
+            height: 40vh;
+            background-image: url('./propics/about-05.jpg');
+            background-size: cover;
+        }
+        .abttexti {
+            width: 40%;
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .contacts {
+            margin-top: 5vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8vh;
+        }
+        .contacts p {
+            margin: 0 auto;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .forms {
+            text-align: center;
+            background-color: aqua;
+            background-image: url('./propics/incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.webp');
+            background-size: cover;
+        }
+        .forms a {
+            color: aqua;
+        }
+
+        /* Media query for devices with a max-width of 425px */
+        @media (max-width: 425px) {
+            header {
+                flex-direction: row;
+                top: 50%;
+                padding: 1% 0;
+                
+            }
+            .text h1, .text p {
+                display: flex;
+                padding: 0;
+            }
+            .hlinks ul {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 0;
+                margin-top:100%;
+                /* margin-left: 10px; */
+                width: 100%;
+            }
+            .hlinks ul li {
+                margin: 0 1vh;
+            }
+            header ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            header ul li {
+                margin-left: 0;
+                margin-bottom: 1vh;
+            }
+            .ya {
+                margin-top: 2%;
+            }
+            .ya h4 {
+                padding: 0 2%;
+            }
+            .yash {
+                margin-top: 5vh;
+                flex-direction: column;
+                gap: 2vh;
+            }
+            .yash button {
+                width: 80%;
+                margin-right: 0;
+            }
+            .piz {
+                flex-direction: column;
+                align-items: center;
+            }
+            .piz div {
+                width: 100%;
+                margin: 1vh 0;
+            }
+            .abt {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                height: 110%;
+            }
+            .abtimg, .abttext {
+                width: 100%;
+                height: auto;
+            }
+            .abt button {
+                margin-left: 0;
+                width: auto;
+            }
+            .content {
+                margin-top: 2vh;
+            }
+            .text {
+                /* grid-template-columns: 1fr; */
+                margin-top: 0;
+            }
+            .text div {
+                width: 100%;
+                margin: 0;
+            }
+            .contacts p {
+                margin-left: 0;
+                width: 100%;
+                text-align: center;
+            }
+            .forms input[type="submit"] {
+                width: 100%;
+            }
+            .abttexti{
+                height: 100%;
+            
+            }
+            .hlogo{
+                margin-top: 30%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <header>
+                <div class="hlogo">
+                    <div><img src="./propics/simple-house-logo.png" alt="logo"></div>
+                    <div class="texty">
+                        <h1>Simple House</h1>
+                        <p>New restaurant </p>
+                    </div>
+                </div>
+                <div class="hlinks">
+                    <ul>
+                        <li ><a href="#script">Home</a></li>
+                        <li ><a href="#name">About</a></li>
+                        <li ><a href="#save">Contact</a></li>
+                    </ul>
+                </div>
+            </header>
+        </section>
+        <div class="ya" id="script">
+            <h1>Welcome To Simple House</h1>
+            <h4>Total 3 HTML pages are included in this template. Header image has a parallax effect. You can feel free to download, edit and use this TemplateMo layout for your commercial or non-commercial websites.</h4>
+        </div>
+        <div class="yash">
+            <button>Pizza</button>
+            <button>Salad</button>
+            <button>Noodles</button>
+        </div><br>
+        <div class="pizza">
+            <div class="piz">
+                <div>
+                    <img src="./propics/01.jpg" width="100%"/>
+                    <h2>Fusce dictum finibus</h2>
+                    <p>Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p><br>
+                    <p>$45 / $55</p>
+                </div>
+                <div>
+                    <img src="./propics/02.jpg" width="100%"/>
+                    <h2>Aliquam sagittis</h2>
+                    <p>Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p><br>
+                    <p>$65 / $70</p>
+                </div>
+                <div>
+                    <img src="./propics/03.jpg" width="100%"/>
+                    <h2>Sed varius turpis</h2>
+                    <p>Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p><br>
+                    <p>$30.50</p>
+                </div>
+                <div>
+                    <img src="./propics/04.jpg" width="100%"/>
+                    <h2>Aliquam sagittis</h2>
+                    <p>Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p><br>
+                    <p>$25.50</p>
+                </div>
+            </div>
+            <div class="piz">
+                <div>
+                    <img src="./propics/05.jpg" width="100%"/>
+                    <h2>Maecenas eget justo</h2>
+                    <p>Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p><br>
+                    <p>$80.25</p>
+                </div>
+                <div>
+                    <img src="./propics/06.jpg" width="100%"/>
+                    <h2>Quisque et felis eros</h2>
+                    <p>Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p><br>
+                    <p>$20 / $40 / $60</p>
+                </div>
+                <div>
+                    <img src="./propics/07.jpg" width="100%"/>
+                    <h2>Sed ultricies dui</h2>
+                    <p>Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p><br>
+                    <p>$94</p>
+                </div>
+                <div>
+                    <img src="./propics/08.jpg" width="100%"/>
+                    <h2>Donec porta consequat</h2>
+                    <p>Nam in suscipit nisi, sit amet consectetur metus. Ut sit amet tellus accumsan</p><br>
+                    <p>$15</p>
+                </div>
+            </div>
+        </div>
+        <div class="abt">
+            <div class="abtimg"></div>
+            <div class="abttext">
+                <h3>Maecenas nulla neque</h3>
+                <p>Redistributing this template as a downloadable ZIP file on any template collection site is strictly prohibited. You will need to talk to us for additional permissions about our templates. Thank you.</p>
+                <button>Read more</button>
+            </div>
+        </div>
+        <hr>
+        <div class="content" id="name">
+            <h1>About Simple House</h1>
+            <p>This is the about page of the Simple House template. You can modify and use this HTML template for your website. A total of 3 HTML pages are included in this template. The header image has a parallax effect.</p>
+        </div>
+        <div class="whether">
+            <div class="text">
+                <div>
+                    <img src="./propics/about-01.jpg" width="100%">
+                    <h1>Jennifer Soft</h1>
+                    <h4>Founder and CEO</h4>
+                    <p>Vivamus cursus leo nec sem feugiat sagittis. Duis ut feugiat odio, sit amet accumsan odio.</p>
+                </div>
+                <div>
+                    <img src="./propics/about-02.jpg" width="100%">
+                    <h1>Daisy Walker</h1>
+                    <h4>Executive Chef</h4>
+                    <p>Praesent non vulputate elit. Orci varius natoque et magnis dis parturient, nascetur ridiculus mus.</p>
+                </div>
+                <div>
+                    <img src="./propics/about-03.jpg" width="100%">
+                    <h1>Florence Nelson</h1>
+                    <h4>Kitchen Manager</h4>
+                    <p>Aenean sapien sem, ultricies sed vulputate et, auctor vel mauris. Integer sit amet diam eget est facilisis lacinia vitae.</p>
+                </div>
+                <div>
+                    <img src="./propics/about-04.jpg" width="100%">
+                    <h1>Valentina Martin</h1>
+                    <h4>Culinary Director</h4>
+                    <p>Praesent non vulputate elit. Orci varius natoque penatibus et magnis montes, nascetur ridiculus mus.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="abti">
+            <div class="abtimag"></div>
+            <div class="abttexti">
+                <h2>History of our restaurant</h2>
+                <p>Sed ligula risus, interdum aliquet imperdiet sit amet, auctor sit amet justo. Maecenas posuere lorem id augue interdum vehicula. Praesent sed leo eget libero ultricies congue. Redistributing this template as a downloadable ZIP file on any template collection site is strictly prohibited. You will need to contact TemplateMo for additional permissions about our templates. Thank you.</p>
+            </div>
+        </div>
+        <hr>
+        <br  >
+        <div class="contacts" id="save">
+            <h1>Contact Page</h1>
+            <p>Enter your details</p>
+        </div>
+        <div class="forms">
+            <form action="./daycss.html">
+                <fieldset>
+                    <legend>User Details</legend>
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" placeholder="Full Name" name="full-name"/><br/><br/>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Email" name="email"/><br/><br/>
+                    <label for="description">Description:</label><br/>
+                    <textarea id="description" rows="10" cols="55"></textarea><br/>
+                    <input type="submit" value="Submit"><br/>
+                    <a href="mailto:yashureddy6301@gmail.com">Email</a><br/>
+                    <a href="tel:6301644695">Mobile</a>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
